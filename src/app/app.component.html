@@ -1,6 +1,7 @@
-<span *ngIf="!hasWallet">No Wallet Installed</span>
-<button class="btn-primary" *ngIf="hasWallet && !walletConnected" (click)='onClickConnect()'>Connect Wallet</button>
+
 <div class="container">
+  <span *ngIf="!hasWallet">No Wallet Installed Install <a href="https://metamask.io/">MetaMask</a> to continue</span>
+  <button class="btn-primary" *ngIf="hasWallet && !walletConnected" (click)='onClickConnect()'>Connect Wallet</button>
   <span *ngIf="hasWallet && walletConnected">Ready to rock</span>
 </div>
 <div class="container">
