@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <input [(ngModel)]="watchAddress"><button class="btn-primary" (click)="onWatchClick()">Watch</button>
-  Notify Me <input type="checkbox" [(ngModel)]="notifyMe">
+  Notify Me <input type="checkbox" [(ngModel)]="notifyMe" (change)="onClickNotifyMe($event)">
   <ul>
     <li *ngFor="let address of watchAddresses" (click)="onWatchAddressClick(address)" class="watch-address">{{address}}</li>
   </ul>

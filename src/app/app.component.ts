@@ -27,7 +27,6 @@ export class AppComponent {
   {
     this.web3Init();
     this.loadState();
-    Notification.requestPermission();
   }
 
   loadState()
@@ -162,5 +161,13 @@ export class AppComponent {
   
     // At last, if the user has denied notifications, and you
     // want to be respectful there is no need to bother them any more.
+  }
+
+  onClickNotifyMe(ev: any)
+  {
+    console.log(ev);
+    if(this.notifyMe){
+      Notification.requestPermission();
+    }
   }
 }
